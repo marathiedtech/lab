@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>DzynCode — Pocket Coding Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="DzynCode home"><span class="brand-mark">&lt;/&gt;</span><span>Dzyn<span class="accent">Code</span><small>POCKET CODING LAB</small></span></a>
+    <div class="top-actions">
+      <button id="resetBtn" class="ghost" title="Reset starter code">Reset</button>
+      <button id="downloadBtn" class="ghost" title="Download project files">Download</button>
+      <button id="runBtn" class="run"><span>▶</span> Run</button>
+    </div>
+  </header>
+
+  <main class="app">
+    <section class="intro">
+      <div><p class="eyebrow">LEARN · PRACTICE · BUILD</p><h1>Your coding classroom,<br><span>inside your phone.</span></h1>
+      <p class="sub">Write HTML, CSS and JavaScript. Run your code and see the result instantly.</p></div>
+      <div class="device-chip">📱 Mobile friendly <b>•</b> 💻 Desktop ready</div>
+    </section>
+
+    <section class="workspace">
+      <div class="panel editor-panel">
+        <div class="panel-head">
+          <div class="tabs" role="tablist">
+            <button class="tab active" data-file="html">index.html</button>
+            <button class="tab" data-file="css">style.css</button>
+            <button class="tab" data-file="js">script.js</button>
+          </div>
+          <span id="saveStatus" class="save-status">Saved locally</span>
+        </div>
+        <div class="editor-wrap"><textarea id="code"></textarea></div>
+        <div class="editor-foot"><span id="lineInfo">HTML · Edit your code</span><span>Auto-save on</span></div>
+      </div>
+
+      <div class="panel preview-panel">
+        <div class="panel-head preview-head"><div><span class="live-dot"></span><b>Live Preview</b></div><button id="refreshBtn" class="icon-btn" title="Refresh preview">↻</button></div>
+        <iframe id="preview" title="Your website preview" sandbox="allow-scripts"></iframe>
+        <div class="preview-foot"><span>Output</span><span id="previewStatus">Ready to run</span></div>
+      </div>
+    </section>
+
+    <section class="bottom-grid">
+      <div class="tip-card"><div class="tip-icon">💡</div><div><b>Practice tip</b><p>Change the heading, try a new colour in CSS, then press <b>Run</b> to see your changes.</p></div></div>
+      <div class="challenge"><div><p class="eyebrow">TODAY'S MINI CHALLENGE</p><b>Make this page yours!</b><p>Update the title, background colour and button text.</p></div><span>01</span></div>
+    </section>
+    <footer>Made for learners by <b>UpSkilling Maharashtra</b> <span>·</span> DzynCode</footer>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
